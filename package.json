@@ -14,7 +14,8 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name base-lib --dest $npm_package_config_target packages/index.ts"
+    "release": "node release.js && npm run lib",
+    "lib": "cross-var vue-cli-service build --target lib --name base-lib --dest $npm_package_config_target packages/index.ts"
   },
   "dependencies": {
     "core-js": "^3.6.4",

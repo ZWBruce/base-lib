@@ -38,4 +38,6 @@ inquirer.prompt([
     } else {
         exec(`npm version ${answer.selected} && npm run lib`)
     }
+}).catch(e=>{
+    throw new Error('出错啦，终止执行')
 })
